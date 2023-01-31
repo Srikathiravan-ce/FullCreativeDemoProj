@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-31T13:06:09 IST" name="Default suite" finished-at="2023-01-31T13:08:05 IST" duration-ms="116503">
+    <groups>
+    </groups>
+    <test started-at="2023-01-31T13:06:09 IST" name="Default test" finished-at="2023-01-31T13:08:05 IST" duration-ms="116503">
+      <class name="Test.Demo">
+        <test-method is-config="true" signature="initializeURL()[pri:0, instance:Test.Demo@c730b35]" started-at="2023-01-31T13:06:09 IST" name="initializeURL" finished-at="2023-01-31T13:06:49 IST" duration-ms="40225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeURL -->
+        <test-method signature="RunTest()[pri:0, instance:Test.Demo@c730b35]" started-at="2023-01-31T13:06:49 IST" name="RunTest" finished-at="2023-01-31T13:07:58 IST" duration-ms="68594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RunTest -->
+        <test-method is-config="true" signature="logOutAndClose()[pri:0, instance:Test.Demo@c730b35]" started-at="2023-01-31T13:07:58 IST" name="logOutAndClose" finished-at="2023-01-31T13:08:05 IST" duration-ms="7594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOutAndClose -->
+      </class> <!-- Test.Demo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

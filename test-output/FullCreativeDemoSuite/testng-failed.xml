@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FullCreativeDemoSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TrelloTest(failed)">
+    <classes>
+      <class name="Test.Demo">
+        <methods>
+          <include name="logOutAndClose"/>
+          <include name="initializeURL"/>
+          <include name="RunTest"/>
+        </methods>
+      </class> <!-- Test.Demo -->
+    </classes>
+  </test> <!-- TrelloTest(failed) -->
+</suite> <!-- Failed suite [FullCreativeDemoSuite] -->
