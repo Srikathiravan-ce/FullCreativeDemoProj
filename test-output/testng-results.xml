@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-31T13:06:09 IST" name="Default suite" finished-at="2023-01-31T13:08:05 IST" duration-ms="116503">
+  <suite started-at="2023-01-31T15:24:44 IST" name="Default suite" finished-at="2023-01-31T15:25:32 IST" duration-ms="48717">
     <groups>
     </groups>
-    <test started-at="2023-01-31T13:06:09 IST" name="Default test" finished-at="2023-01-31T13:08:05 IST" duration-ms="116503">
+    <test started-at="2023-01-31T15:24:44 IST" name="Default test" finished-at="2023-01-31T15:25:32 IST" duration-ms="48717">
       <class name="Test.Demo">
-        <test-method is-config="true" signature="initializeURL()[pri:0, instance:Test.Demo@c730b35]" started-at="2023-01-31T13:06:09 IST" name="initializeURL" finished-at="2023-01-31T13:06:49 IST" duration-ms="40225" status="PASS">
+        <test-method is-config="true" signature="initializeURL()[pri:0, instance:Test.Demo@7c7a06ec]" started-at="2023-01-31T15:24:44 IST" name="initializeURL" finished-at="2023-01-31T15:24:57 IST" duration-ms="12942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeURL -->
-        <test-method signature="RunTest()[pri:0, instance:Test.Demo@c730b35]" started-at="2023-01-31T13:06:49 IST" name="RunTest" finished-at="2023-01-31T13:07:58 IST" duration-ms="68594" status="PASS">
+        <test-method signature="RunTest()[pri:0, instance:Test.Demo@7c7a06ec]" started-at="2023-01-31T15:24:57 IST" name="RunTest" finished-at="2023-01-31T15:25:27 IST" duration-ms="30618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RunTest -->
-        <test-method is-config="true" signature="logOutAndClose()[pri:0, instance:Test.Demo@c730b35]" started-at="2023-01-31T13:07:58 IST" name="logOutAndClose" finished-at="2023-01-31T13:08:05 IST" duration-ms="7594" status="PASS">
+        <test-method is-config="true" signature="logOutAndClose()[pri:0, instance:Test.Demo@7c7a06ec]" started-at="2023-01-31T15:25:27 IST" name="logOutAndClose" finished-at="2023-01-31T15:25:32 IST" duration-ms="5027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOutAndClose -->
