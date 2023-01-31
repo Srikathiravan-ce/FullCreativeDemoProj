@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -15,7 +16,7 @@ import org.openqa.selenium.support.ui.Wait;
 public class Demo {
 
 	public static void main(String args[]) throws InterruptedException {
-		//opening the browser and URL
+		//Opening the browser and URL
 		System.setProperty("webdriver.edge.driver","C:\\msedgedriver.exe");
 		EdgeDriver driver = new EdgeDriver();
 		driver.get("https://trello.com/");
@@ -25,9 +26,9 @@ public class Demo {
 		Duration oneSecond  = Duration.ofSeconds(1);
 		Wait<EdgeDriver> wait = new FluentWait(driver).withTimeout(fifteenSeconds).pollingEvery(oneSecond).ignoring(NoSuchElementException.class);
 		
-		//logging IN
+		//Logging IN
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter email']")));
-		driver.findElement(By.xpath("//input[@placeholder='Enter email']")).sendKeys("srikathir124@gmail.com");
+		driver.findElement(By.xpath("//input[@placeholder='Enter email']")).sendKeys("srikathirce@gmail.com");
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter password']")));
@@ -52,14 +53,23 @@ public class Demo {
 		
 		//Adding List Item
 		driver.findElement(By.xpath("//h2[text()='List A']/ancestor::div[1]/following-sibling::div[2]/a[1]")).click();
+		driver.manage().timeouts().implicitlyWait(oneSecond);
 		driver.findElement(By.xpath("//h2[text()='List A']/ancestor::div[1]/following-sibling::div[1]//textarea[1]")).sendKeys(date.toString());
 		driver.findElement(By.xpath("//input[@value='Add card']")).click();
 		
-		//dragging and dropping list item from List A to List B
+		//Dragging and dropping list item from List A to List B
 		Actions action = new Actions(driver);
 		WebElement ele1 = driver.findElement(By.xpath("//h2[text()='List A']/ancestor::div[1]/following-sibling::div[1]/a[1]"));
+		Point p1 = ele1.getLocation();
+		int x1 = p1.getX();	int y1 = p1.getY();
 		WebElement ele2 = driver.findElement(By.xpath("//h2[text()='List B']/ancestor::div[1]/following-sibling::div[2]/a[1]"));
 		action.dragAndDrop(ele1, ele2).build().perform();
+		
+		//Printing X and Y co-ordinates
+		
+		Point p2 = driver.findElement(By.xpath("//h2[text()='List B']/ancestor::div[1]/following-sibling::div[2]/a[1]")).getLocation();
+		int x2 = p2.getX();	int y2 = p2.getY();
+		System.out.println("Card was moved from (" +x1+ "," +y1+ ") to (" +x2+ ","+ y2 +")");
 		
 		//Logging OUT
 		driver.findElement(By.xpath("//button[@data-testid= 'header-member-menu-button']")).click();
